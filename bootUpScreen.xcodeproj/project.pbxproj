@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115F51411A04767100A7FCD5 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 115F51401A04767100A7FCD5 /* background@2x.png */; };
+		11C2BFB019F9ECA2002F8BD8 /* pikatyu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11C2BFAF19F9ECA2002F8BD8 /* pikatyu.jpg */; };
 		11F5B1A119F801AD00C7C58C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5B1A019F801AD00C7C58C /* main.m */; };
 		11F5B1A419F801AD00C7C58C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5B1A319F801AD00C7C58C /* AppDelegate.m */; };
 		11F5B1A719F801AD00C7C58C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5B1A619F801AD00C7C58C /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		115F51401A04767100A7FCD5 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		11C2BFAF19F9ECA2002F8BD8 /* pikatyu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pikatyu.jpg; sourceTree = "<group>"; };
 		11F5B19B19F801AD00C7C58C /* bootUpScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bootUpScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F5B19F19F801AD00C7C58C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F5B1A019F801AD00C7C58C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115F513F1A04765C00A7FCD5 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				115F51401A04767100A7FCD5 /* background@2x.png */,
+			);
+			name = img;
+			sourceTree = "<group>";
+		};
 		11F5B19219F801AC00C7C58C = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +93,12 @@
 		11F5B19D19F801AD00C7C58C /* bootUpScreen */ = {
 			isa = PBXGroup;
 			children = (
+				11C2BFAF19F9ECA2002F8BD8 /* pikatyu.jpg */,
 				11F5B1A219F801AD00C7C58C /* AppDelegate.h */,
 				11F5B1A319F801AD00C7C58C /* AppDelegate.m */,
+				11F5B1A819F801AD00C7C58C /* Main.storyboard */,
 				11F5B1A519F801AD00C7C58C /* ViewController.h */,
 				11F5B1A619F801AD00C7C58C /* ViewController.m */,
-				11F5B1A819F801AD00C7C58C /* Main.storyboard */,
 				11F5B1AB19F801AD00C7C58C /* Images.xcassets */,
 				11F5B1AD19F801AD00C7C58C /* LaunchScreen.xib */,
 				11F5B19E19F801AD00C7C58C /* Supporting Files */,
@@ -96,6 +109,7 @@
 		11F5B19E19F801AD00C7C58C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				115F513F1A04765C00A7FCD5 /* img */,
 				11F5B19F19F801AD00C7C58C /* Info.plist */,
 				11F5B1A019F801AD00C7C58C /* main.m */,
 			);
@@ -200,7 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F5B1AA19F801AD00C7C58C /* Main.storyboard in Resources */,
+				11C2BFB019F9ECA2002F8BD8 /* pikatyu.jpg in Resources */,
 				11F5B1AF19F801AD00C7C58C /* LaunchScreen.xib in Resources */,
+				115F51411A04767100A7FCD5 /* background@2x.png in Resources */,
 				11F5B1AC19F801AD00C7C58C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +430,7 @@
 				11F5B1C019F801AD00C7C58C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11F5B1C119F801AD00C7C58C /* Build configuration list for PBXNativeTarget "bootUpScreenTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +439,7 @@
 				11F5B1C319F801AD00C7C58C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
