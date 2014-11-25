@@ -96,7 +96,7 @@
     [self.view bringSubviewToFront:slide];
     
     if ([sender state] == UIGestureRecognizerStateEnded){
-        [UIView animateWithDuration:0.2 // 0.3秒かけてアニメーション
+        [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
                          animations:^
         {
             CGRect frame = slide.frame;
