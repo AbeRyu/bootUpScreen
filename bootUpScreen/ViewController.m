@@ -31,6 +31,12 @@
     
     UIImage *backgroundImage2  = [UIImage imageNamed:@"lock.png"];
     lock.backgroundColor = [UIColor colorWithPatternImage:backgroundImage2];
+
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    [slide addGestureRecognizer:pan];
+    
+    NSLog(@"通ったよ！");
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +59,8 @@
     NSInteger day = comps.day;
     NSInteger hour = comps.hour;
     NSInteger minute = comps.minute;
+    
+    NSLog(@"%f",slide.center.x);
 //    NSString *week;
 //    
 //    switch (weekday) {
@@ -87,28 +95,26 @@
     time.text = [NSString stringWithFormat:@"%d:%02d",hour,minute];
     date.text = [NSString stringWithFormat:@"%d月%d日(%@曜日)",month,day,weekArray[weekday-1]];
     
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
-    [slide addGestureRecognizer:pan];
-    
 }
 
 -(void)panAction:(UIPanGestureRecognizer *)sender{
     
-    CGPoint st = [sender translationInView:self.view];
-    CGPoint movePoint = CGPointMake(slide.center.x + st.x, slide.center.y);
-    slide.center = movePoint;
-    
-    [sender setTranslation:CGPointZero inView:self.view];
-    [self.view bringSubviewToFront:slide];
-    
     if ([sender state] == UIGestureRecognizerStateEnded){
         [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
                          animations:^
-        {
-            CGRect frame = slide.frame;
-            frame.origin.x = 0; // 右に100移動
-            slide.frame = frame;
-        }];
+         {
+             CGRect frame = slide.frame;
+             frame.origin.x = 0; // 右に100移動
+             slide.frame = frame;
+         }];
+    }else if(35 < slide.center.x && slide.center.x < 242.5){
+        
+        CGPoint st = [sender translationInView:self.view];
+            CGPoint movePoint = CGPointMake(slide.center.x + st.x, slide.center.y);
+            slide.center = movePoint;
+        [sender setTranslation:CGPointZero inView:self.view];
+        [self.view bringSubviewToFront:slide];
+
     }
 }
 
