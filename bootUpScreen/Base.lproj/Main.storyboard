@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8月24日(土曜日)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a77-Vl-wYc">
-                                        <rect key="frame" x="116.5" y="68.5" width="140" height="21"/>
+                                        <rect key="frame" x="116" y="68" width="140" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="vUt-Hp-Ark"/>
                                         </constraints>
@@ -67,8 +67,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="97"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ih-bx-weC">
-                                        <rect key="frame" x="49" y="21" width="276" height="54"/>
+                                        <rect key="frame" x="49" y="22" width="276" height="54"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ロック解除" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-1p-a1j">
+                                                <rect key="frame" x="84" y="8" width="108" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Td-1x-yK9">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -78,7 +84,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="0Td-1x-yK9" firstAttribute="leading" secondItem="5ih-bx-weC" secondAttribute="leading" id="32Y-wq-Eej"/>
                                             <constraint firstAttribute="width" constant="276" id="JqL-l8-6EF"/>

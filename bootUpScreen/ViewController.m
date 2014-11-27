@@ -25,6 +25,12 @@
                                            selector:@selector(time)
                                            userInfo:nil
                                             repeats:YES];
+    
+    UIImage *backgroundImage  = [UIImage imageNamed:@"slide.png"];
+    slide.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
+    
+    UIImage *backgroundImage2  = [UIImage imageNamed:@"lock.png"];
+    lock.backgroundColor = [UIColor colorWithPatternImage:backgroundImage2];
 }
 
 - (void)didReceiveMemoryWarning {
