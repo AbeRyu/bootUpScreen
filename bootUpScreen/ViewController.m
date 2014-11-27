@@ -100,13 +100,17 @@
 -(void)panAction:(UIPanGestureRecognizer *)sender{
     
     if ([sender state] == UIGestureRecognizerStateEnded){
-        [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
-                         animations:^
-         {
-             CGRect frame = slide.frame;
-             frame.origin.x = 0; // 右に100移動
-             slide.frame = frame;
-         }];
+        if(slide.center.x > 240){
+            // 画面遷移
+        }else{
+            [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
+                             animations:^
+             {
+                 CGRect frame = slide.frame;
+                 frame.origin.x = 0; // 右に100移動
+                 slide.frame = frame;
+             }];
+        }
     }else if(35 < slide.center.x && slide.center.x < 242.5){
         
         CGPoint st = [sender translationInView:self.view];
