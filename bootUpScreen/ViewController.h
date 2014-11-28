@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController<UIGestureRecognizerDelegate>{
+    IBOutlet UIView *headerView;
     IBOutlet UILabel *time;
     IBOutlet UILabel *date;
     
+    IBOutlet UIView *footerView;
     IBOutlet UIView *lock;
     IBOutlet UIView *slide;
+    IBOutlet UILabel *unlockLabel;
     
     NSTimer *timer;
 }

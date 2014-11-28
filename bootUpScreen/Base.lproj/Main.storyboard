@@ -154,9 +154,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="date" destination="a77-Vl-wYc" id="5Rw-ZB-trg"/>
+                        <outlet property="footerView" destination="yho-Xk-fbq" id="u7c-hU-Ild"/>
+                        <outlet property="headerView" destination="A4S-kn-Aie" id="RA2-Xf-BmH"/>
                         <outlet property="lock" destination="5ih-bx-weC" id="h9Y-cR-MzX"/>
                         <outlet property="slide" destination="0Td-1x-yK9" id="yn6-Ml-QqS"/>
                         <outlet property="time" destination="4D8-YL-cwv" id="elA-ED-iUk"/>
+                        <outlet property="unlockLabel" destination="Xve-1p-a1j" id="dHB-R6-00B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
