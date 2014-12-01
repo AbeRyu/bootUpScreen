@@ -35,8 +35,19 @@
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
     [slide addGestureRecognizer:pan];
     
-    NSLog(@"通ったよ！");
-
+    
+    //画面取得
+    UIScreen *sc = [UIScreen mainScreen];
+    //ステータスバー込みのサイズ
+    CGRect rect = sc.bounds;
+    blackView = [[UIView alloc]init];
+    blackView.backgroundColor = [UIColor blackColor];
+    blackView.frame = rect;
+    blackView.alpha = 0;
+    [self.view addSubview:blackView];
+    [self.view bringSubviewToFront:blackView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -60,7 +71,9 @@
     NSInteger hour = comps.hour;
     NSInteger minute = comps.minute;
     
-    NSLog(@"%f",slide.center.x);
+//    NSLog(@"%f",slide.center.x);
+    
+    
 //    NSString *week;
 //    
 //    switch (weekday) {
@@ -105,6 +118,7 @@
             [UIView animateWithDuration:0.5 // 0.2秒かけてアニメーション
                              animations:^
              {
+                 blackView.alpha = 1;
                  CGRect headerFrame = headerView.frame;
                  headerFrame.origin.y = -150; // 右に100移動
                  headerView.frame = headerFrame;
@@ -135,6 +149,8 @@
                  unlockFrame.origin.y = 150;
                  unlockLabel.frame = unlockFrame;
                  
+                 [self dismissViewControllerAnimated:YES completion:nil];
+                 [self performSelector:@selector(transition) withObject:nil afterDelay:0.5];
              }];
         }else{
             [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
@@ -154,6 +170,11 @@
         [self.view bringSubviewToFront:slide];
 
     }
+}
+
+-(void)transition{
+    ViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC"];
+    [self presentViewController:ViewController animated:NO completion:nil];
 }
 
 @end

@@ -18,6 +18,7 @@
     IBOutlet UIView *slide;
     IBOutlet UILabel *unlockLabel;
     
+    UIView *blackView;
     NSTimer *timer;
 }
 
