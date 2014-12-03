@@ -18,7 +18,6 @@
 
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self time];
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                              target:self
@@ -26,14 +25,20 @@
                                            userInfo:nil
                                             repeats:YES];
     
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+    [slide addGestureRecognizer:pan];
+    
+    [self time];
+    
+    
     UIImage *backgroundImage  = [UIImage imageNamed:@"slide.png"];
     slide.backgroundColor = [UIColor colorWithPatternImage:backgroundImage];
     
     UIImage *backgroundImage2  = [UIImage imageNamed:@"lock.png"];
     lock.backgroundColor = [UIColor colorWithPatternImage:backgroundImage2];
-
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
-    [slide addGestureRecognizer:pan];
+    
+    
     
     
     //画面取得
@@ -47,6 +52,10 @@
     [self.view addSubview:blackView];
     [self.view bringSubviewToFront:blackView];
     
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
     
 }
 
@@ -151,6 +160,7 @@
                  
                  [self dismissViewControllerAnimated:YES completion:nil];
                  [self performSelector:@selector(transition) withObject:nil afterDelay:0.5];
+                 
              }];
         }else{
             [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
@@ -175,6 +185,9 @@
 -(void)transition{
     ViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC"];
     [self presentViewController:ViewController animated:NO completion:nil];
+    ViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 }
+
+
 
 @end
