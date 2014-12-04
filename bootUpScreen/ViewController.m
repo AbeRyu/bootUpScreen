@@ -159,7 +159,7 @@
                  unlockLabel.frame = unlockFrame;
              }];
             //[self dismissViewControllerAnimated:YES completion:nil];
-            [self performSelector:@selector(transition) withObject:nil afterDelay:1];
+            [self performSelector:@selector(transition) withObject:nil afterDelay:0.6];
         }else{
             [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
                              animations:^
