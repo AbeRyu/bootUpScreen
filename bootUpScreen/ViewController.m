@@ -157,11 +157,9 @@
                  CGRect unlockFrame =unlockLabel.frame;
                  unlockFrame.origin.y = 150;
                  unlockLabel.frame = unlockFrame;
-                 
-                 [self dismissViewControllerAnimated:YES completion:nil];
-                 [self performSelector:@selector(transition) withObject:nil afterDelay:0.5];
-                 
              }];
+            //[self dismissViewControllerAnimated:YES completion:nil];
+            [self performSelector:@selector(transition) withObject:nil afterDelay:1];
         }else{
             [UIView animateWithDuration:0.2 // 0.2秒かけてアニメーション
                              animations:^
@@ -178,7 +176,6 @@
             slide.center = movePoint;
         [sender setTranslation:CGPointZero inView:self.view];
         [self.view bringSubviewToFront:slide];
-
     }
 }
 
