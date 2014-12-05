@@ -167,6 +167,7 @@
                  CGRect frame = slide.frame;
                  frame.origin.x = 0; // 右に100移動
                  slide.frame = frame;
+                 unlockLabel.alpha = 1;
              }];
         }
     }else if(35 < slide.center.x && slide.center.x < 242.5){
@@ -175,6 +176,8 @@
             slide.center = movePoint;
         [sender setTranslation:CGPointZero inView:self.view];
         [self.view bringSubviewToFront:slide];
+        
+        unlockLabel.alpha = 1 - (slide.center.x -35)/100;
     }
 }
 
@@ -185,6 +188,7 @@
     ViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
      -- */
     
+    unlockLabel.alpha = 1;
     
     CGRect slideFrame =slide.frame;
     slideFrame.origin.x = 0;
