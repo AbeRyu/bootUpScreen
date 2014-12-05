@@ -37,9 +37,7 @@
     
     UIImage *backgroundImage2  = [UIImage imageNamed:@"lock.png"];
     lock.backgroundColor = [UIColor colorWithPatternImage:backgroundImage2];
-    
-    
-    
+
     
     //画面取得
     UIScreen *sc = [UIScreen mainScreen];
@@ -128,10 +126,11 @@
                              animations:^
              {
                  blackView.alpha = 1;
-                 CGRect headerFrame = headerView.frame;
-                 headerFrame.origin.y = -150; // 右に100移動
-                 headerView.frame = headerFrame;
                  
+                 CGRect headerFrame = headerView.frame;
+                 headerFrame.origin.y -= 150; // 右に100移動
+                 headerView.frame = headerFrame;
+                 /*
                  CGRect dateFrame =date.frame;
                  dateFrame.origin.y = -150;
                  date.frame = dateFrame;
@@ -139,13 +138,13 @@
                  CGRect timeFrame =time.frame;
                  timeFrame.origin.y = -150;
                  time.frame = timeFrame;
-                 
+                 */
                  
                  
                  CGRect footerFrame = footerView.frame;
-                 footerFrame.origin.y = 150; // 右に100移動
+                 footerFrame.origin.y += 150; // 右に100移動
                  footerView.frame = footerFrame;
-                 
+                 /*
                  CGRect slideFrame =slide.frame;
                  slideFrame.origin.y = 150;
                  slide.frame = slideFrame;
@@ -157,6 +156,7 @@
                  CGRect unlockFrame =unlockLabel.frame;
                  unlockFrame.origin.y = 150;
                  unlockLabel.frame = unlockFrame;
+                  */
              }];
             //[self dismissViewControllerAnimated:YES completion:nil];
             [self performSelector:@selector(transition) withObject:nil afterDelay:0.6];
