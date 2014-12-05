@@ -170,7 +170,6 @@
              }];
         }
     }else if(35 < slide.center.x && slide.center.x < 242.5){
-        
         CGPoint st = [sender translationInView:self.view];
             CGPoint movePoint = CGPointMake(slide.center.x + st.x, slide.center.y);
             slide.center = movePoint;
@@ -180,9 +179,26 @@
 }
 
 -(void)transition{
+    /* -- 画面遷移
     ViewController *ViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"VC"];
     [self presentViewController:ViewController animated:NO completion:nil];
     ViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+     -- */
+    
+    
+    CGRect slideFrame =slide.frame;
+    slideFrame.origin.x = 0;
+    slide.frame = slideFrame;
+    
+    CGRect headerFrame = headerView.frame;
+    headerFrame.origin.y += 150; // 右に100移動
+    headerView.frame = headerFrame;
+    
+    CGRect footerFrame = footerView.frame;
+    footerFrame.origin.y -= 150; // 右に100移動
+    footerView.frame = footerFrame;
+
+    blackView.alpha = 0;
 }
 
 

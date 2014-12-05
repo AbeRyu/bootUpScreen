@@ -71,14 +71,6 @@
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ih-bx-weC">
                                                 <rect key="frame" x="50" y="21" width="276" height="54"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Td-1x-yK9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="54"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="71" id="AfT-a1-c1f"/>
-                                                            <constraint firstAttribute="height" constant="54" id="s2w-TP-UVP"/>
-                                                        </constraints>
-                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ロック解除" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xve-1p-a1j">
                                                         <rect key="frame" x="84" y="8" width="108" height="38"/>
                                                         <constraints>
@@ -89,16 +81,26 @@
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Td-1x-yK9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="54"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="71" id="AfT-a1-c1f"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Ch3-E6-fGh"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="YcR-T7-hXL"/>
+                                                            <constraint firstAttribute="height" constant="54" id="s2w-TP-UVP"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="1AE-B4-TYG"/>
-                                                    <constraint firstItem="0Td-1x-yK9" firstAttribute="leading" secondItem="5ih-bx-weC" secondAttribute="leading" id="6FT-Jc-3Zg"/>
+                                                    <constraint firstItem="0Td-1x-yK9" firstAttribute="leading" secondItem="5ih-bx-weC" secondAttribute="leading" id="4Pa-20-sCu"/>
                                                     <constraint firstAttribute="centerY" secondItem="Xve-1p-a1j" secondAttribute="centerY" id="6ce-nD-Eka"/>
-                                                    <constraint firstAttribute="bottom" secondItem="0Td-1x-yK9" secondAttribute="bottom" id="CrQ-pR-0bY"/>
                                                     <constraint firstAttribute="centerX" secondItem="Xve-1p-a1j" secondAttribute="centerX" id="DF7-cR-x1V"/>
-                                                    <constraint firstItem="0Td-1x-yK9" firstAttribute="top" secondItem="5ih-bx-weC" secondAttribute="top" id="NQH-9A-oHP"/>
-                                                    <constraint firstAttribute="centerY" secondItem="0Td-1x-yK9" secondAttribute="centerY" id="qf8-LE-Dtu"/>
+                                                    <constraint firstAttribute="centerY" secondItem="0Td-1x-yK9" secondAttribute="centerY" id="G6Q-D9-028"/>
+                                                    <constraint firstAttribute="bottom" secondItem="0Td-1x-yK9" secondAttribute="bottom" id="WSM-xa-gHe"/>
+                                                    <constraint firstItem="0Td-1x-yK9" firstAttribute="top" secondItem="5ih-bx-weC" secondAttribute="top" id="nCy-7k-Md2"/>
                                                     <constraint firstAttribute="width" constant="276" id="xGM-TJ-gGw"/>
                                                 </constraints>
                                             </view>
